@@ -1,0 +1,12 @@
+[Unit]
+Description=Service to keep updated a git branch
+
+[Service]
+User=sebas
+WorkingDirectory=/home/sebas/Escritorio/SO_Lab_Service/NodeService
+ExecStart=/usr/bin/node /home/sebas/Escritorio/SO_Lab_Service/NodeService/updateBranch.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
