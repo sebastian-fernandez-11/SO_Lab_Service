@@ -2,9 +2,9 @@
 Description=My node server
 
 [Service]
-User=Sebas
-WorkingDirectory=/home/sebas/Escritorio/NodeService
-ExecStart=/usr/bin/node /home/sebas/Escritorio/NodeService/index.js
+User=sebas
+WorkingDirectory=/home/sebas/Escritorio/SO_Lab_Service/NodeService
+ExecStart=/usr/bin/node /home/sebas/Escritorio/SO_Lab_Service/NodeService/index.js
 Restart=always
 RestartSec=3
 
