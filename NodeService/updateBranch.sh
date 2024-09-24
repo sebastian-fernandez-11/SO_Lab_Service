@@ -3,13 +3,12 @@ SERVICE_NAME="updateService.service"
 cd /home/sebas/Escritorio/SO_Lab_Service/NodeService
 git fetch origin
 
-LOCAL_HASH=$(git rev-parse HEAD)
-REMOTE_HASH=$(git rev-parse origin/deployment)
+LOCAL_COMMIT=$(git rev-parse HEAD)
+REMOTE_COMMIT=$(git rev-parse origin/Deployment)
 
-if ["$LOCAL_HASH" != "$REMOTE_HASH"]; then
+if [ "$LOCAL_COMMIT" != "$REMOTE_COMMIT" ]; then
     echo "Updating branch"
-    git checkout deployment
-    git pull origin deployment
+    git pull origin Deployment
 
     systemctl restart $SERVICE_NAME
     echo "Branch updated"
