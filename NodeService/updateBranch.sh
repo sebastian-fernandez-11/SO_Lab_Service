@@ -1,5 +1,4 @@
 #!/bin/bash
-SERVICE_NAME="update-branch.service"
 while true; do
     cd /home/sebas/Escritorio/SO_Lab_Service/NodeService
     git fetch origin
